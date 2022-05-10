@@ -1,0 +1,2 @@
+I wonder if this works.
+[[file:testpost.org][Here]] is my post.
