@@ -56,10 +56,3 @@ class Week {
 		this.Sunday.toShortDateString()];
     }
 }
-
-/* TODO:
-  Still need to get the starter words for each day and display this all as a nice table or something, with the current day's starter in red.
-*/
-
-// #a89984
-// #504945
