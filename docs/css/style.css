@@ -1,0 +1,5 @@
+body {background-color: #fbf1c7;}
+p.days {font-family: monospace;}
+span.contextDay {color: #bdae93;}
+span.currentDay {color: #fb4933;}
+span.anotherDay {color: #504945;}

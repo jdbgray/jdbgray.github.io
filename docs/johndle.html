@@ -1,28 +1,23 @@
 <html>
     <head>
 	<title>Johndle</title>
+	<link rel="stylesheet"  href="css/style.css">
 	<script src="./js/starters.js" type="text/javascript"></script>
 	<script src="./js/dates.js" type="text/javascript"></script>
 	<script src="./js/johndle.js" type="text/javascript"></script>
-	<script>
-	 window.onload = function() {
-	     document.getElementById("todayDate").innerHTML=today.toShortDateString();
-	     document.getElementById("thisWeekMon").innerHTML=thisWeek.Monday.toShortDateString();
-	     document.getElementById("thisWeekSun").innerHTML=thisWeek.Sunday.toShortDateString();
-	 }
-	</script>
-	<style>
-	 body {background-color: #fbf1c7;}
-	 p.context {color: #a89984;}
-	</style>
     </head>
     <body>
 	<h1>Johndle: <a id="thisWeekMon"></a> - <a id="thisWeekSun"></a></h1>
-	<p class="context">
-	    Today is: <a id="todayDate"></a>.
-	</p>
-	<p>
-	    Something else.
+	<p class="days">
+	    <span id="day0">Sun: </span> <br>
+	    <span id="day1">Mon: </span> <br>
+	    <span id="day2">Tue: </span> <br>
+	    <span id="day3">Wed: </span> <br>
+	    <span id="day4">Thu: </span> <br>
+	    <span id="day5">Fri: </span> <br>
+	    <span id="day6">Sat: </span> <br>
+	    <span id="day7">Sun: </span> <br>
+	    <span id="day8">Mon: </span> <br>
 	</p>
     </body>
 </html>
