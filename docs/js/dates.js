@@ -31,9 +31,9 @@ class jDate extends Date {
     }
 
     toShortDateString() {
-    let dateString = this.toDateString(),
-	l = dateString.length;
-    return dateString.substring(0,l-5);
+	return this.toLocaleString(undefined, {month: "short",
+					       day: "numeric",
+					       weekday: "short"});
     }
 
 }
