@@ -1,6 +1,5 @@
 let origin = new jDate(2022, 03, 25),
-    today = new jDate(),
-    thisWeek = today.toWeek();
+    today = new jDate();
 
 function getDayNumber(jdate) {
     let msPerDay = 1000 * 60 * 60 * 24,
@@ -8,12 +7,15 @@ function getDayNumber(jdate) {
     return dayNumber;
 }
 
-let startIndex = getDayNumber(thisWeek.contextSunday),
+let contextSunday = today.getPrevSunday(),
+    weekStart = today.getPrevMonday(),
+    weekFinish = today.getNextSunday(),
+    startIndex = getDayNumber(contextSunday),
     todayNumber = getDayNumber(today);
 
 window.onload = function() {
-    document.getElementById("thisWeekMon").innerHTML=thisWeek.Monday.toShortDateString();
-    document.getElementById("thisWeekSun").innerHTML=thisWeek.Sunday.toShortDateString();
+    document.getElementById("thisWeekMon").innerHTML=weekStart.toShortDateString();
+    document.getElementById("thisWeekSun").innerHTML=weekFinish.toShortDateString();
     for (var x = 0; x < 9; x++) {
 	let posn = document.getElementById("day" + x);
 	posn.innerHTML+=starters[startIndex + x];

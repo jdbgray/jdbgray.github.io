@@ -1,24 +1,24 @@
-
-
 body {background-color: #fbf1c7;
       font-family: monospace;
       margin-left: 20px;}
 h1 {color: #504945;
     margin-bottom: 0;}
-h2 {color: #7c6f64;
+h2 {color: #a89984;
     margin-top: 5px;
     margin-bottom: 0;}
-p.days {font-size: 200%;}
 span.contextDay {color: #bdae93;}
-span.currentDay {color: #fb4933;}
 span.anotherDay {color: #504945;}
 
+p.days {font-size: 200%;}
+span.currentDay {color: #fb4933;
+                 background: #ebdbb2;}
 
 @media (prefers-color-scheme: dark) {
     body {background-color: #282828;
-	  color: white;}
+	color: white;}
+    h1 {color: #bdae93;}
+    h2 {color: #928374;}
     span.contextDay {color: #504945;}
     span.anotherDay {color: #bdae93;}
-    h1 {color: #7c6f64;}
-    h2 {color: #504945;}
+    span.currentDay {background: #3c3836}    
 }

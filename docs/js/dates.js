@@ -26,8 +26,14 @@ class jDate extends Date {
 	return (this.isMonday() ? this : this.subDay().getPrevMonday());
     }
 
-    toWeek() {
-	return new Week(this.getPrevMonday());
+    getPrevSunday() {
+	let mon = this.getPrevMonday();
+	return mon.subDay();
+    }
+
+    getNextMonday() {
+	let sun = this.getNextSunday();
+	return sun.addDay();
     }
 
     toShortDateString() {
@@ -36,23 +42,4 @@ class jDate extends Date {
 					       weekday: "short"});
     }
 
-}
-
-class Week {
-    constructor(mon) {
-	this.Monday = mon;
-	this.Tuesday = this.Monday.addDay();
-	this.Wednesday = this.Tuesday.addDay();
-	this.Thursday = this.Wednesday.addDay();
-	this.Friday = this.Thursday.addDay();
-	this.Saturday = this.Friday.addDay();
-	this.Sunday = this.Saturday.addDay();
-	this.contextSunday = this.Monday.subDay();
-	this.contextMonday = this.Sunday.addDay();
-    }
-
-    showDays() {
-	return [this.Monday.toShortDateString(),
-		this.Sunday.toShortDateString()];
-    }
 }
