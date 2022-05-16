@@ -1,24 +1,32 @@
-body {background-color: #fbf1c7;
-      font-family: monospace;
-      margin-left: 20px;}
-h1 {color: #504945;
-    margin-bottom: 0;}
-h2 {color: #a89984;
-    margin-top: 5px;
-    margin-bottom: 0;}
-span.contextDay {color: #bdae93;}
-span.anotherDay {color: #504945;}
-
+/* General structure that applies to both themes */
+body {font-family: monospace;
+      margin-left: 1em;}
+h1 {margin-bottom: 0.2em;
+    margin-top: 0;}
+h2 {font-weight: normal;
+    margin-bottom: 0.5em;
+    margin-top: 0;}
 p.days {font-size: 200%;}
-span.currentDay {color: #fb4933;
-                 background: #ebdbb2;}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
 
+/* Light-mode specific colours */
+body {background-color: #fbf1c7;
+      color: #a89984;}
+h1 {color: #504945;}
+.contextDay {color: #bdae93;}
+.anotherDay {color: #504945;}
+.currentDay {color: #fb4933;
+             background: #ebdbb2;}
+
+/* Dark-mode specific colours */
 @media (prefers-color-scheme: dark) {
     body {background-color: #282828;
-	color: white;}
+	  color: #928374;}
     h1 {color: #bdae93;}
-    h2 {color: #928374;}
-    span.contextDay {color: #504945;}
-    span.anotherDay {color: #bdae93;}
-    span.currentDay {background: #3c3836}    
+    .contextDay {color: #504945;}
+    .anotherDay {color: #bdae93;}
+    .currentDay {background: #3c3836;}
 }

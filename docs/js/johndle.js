@@ -13,9 +13,12 @@ let contextSunday = today.getPrevSunday(),
     startIndex = getDayNumber(contextSunday),
     todayNumber = getDayNumber(today);
 
+let mon = weekStart.toShortDateString(),
+    sun = weekFinish.toShortDateString(),
+    week = mon + " - " + sun;
+
 window.onload = function() {
-    document.getElementById("thisWeekMon").innerHTML=weekStart.toShortDateString();
-    document.getElementById("thisWeekSun").innerHTML=weekFinish.toShortDateString();
+    document.getElementById("thisWeek").innerHTML = week;
     for (var x = 0; x < 9; x++) {
 	let posn = document.getElementById("day" + x);
 	posn.innerHTML+=starters[startIndex + x];
@@ -23,6 +26,7 @@ window.onload = function() {
 	    posn.classList.add("contextDay");
 	} else if (startIndex + x === todayNumber) {
 	    posn.classList.add("currentDay");
+	    posn.setAttribute("href", "https://www.nytimes.com/games/wordle/index.html");
 	} else {
 	    posn.classList.add("anotherDay");
 	}
